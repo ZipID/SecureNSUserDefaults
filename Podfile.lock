@@ -1,10 +1,19 @@
 PODS:
-  - CocoaSecurity (1.2.1)
+  - CocoaSecurity (1.2)
 
 DEPENDENCIES:
-  - CocoaSecurity (~> 1.2.1)
+  - CocoaSecurity (from `https://github.com/ZipID/CocoaSecurity.git`)
+
+EXTERNAL SOURCES:
+  CocoaSecurity:
+    :git: https://github.com/ZipID/CocoaSecurity.git
+
+CHECKOUT OPTIONS:
+  CocoaSecurity:
+    :commit: ba2535d12ae04f7ca996e2eeca16cc0c400bf89b
+    :git: https://github.com/ZipID/CocoaSecurity.git
 
 SPEC CHECKSUMS:
-  CocoaSecurity: cfca806aa54a020f0bf24b6ce467e8996dd6bb2e
+  CocoaSecurity: 3cfe3a69df9b35455db56329e640ed3d8b668e69
 
-COCOAPODS: 0.19.1
+COCOAPODS: 0.39.0

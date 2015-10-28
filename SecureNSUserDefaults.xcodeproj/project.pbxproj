@@ -37,7 +37,6 @@
 
 /* Begin PBXFileReference section */
 		71DC6F8B063E4819830E92EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		832070FFF3404F48B40D7825 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		A0FC65A2175D0BDE004620EB /* SecureNSUserDefaults.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecureNSUserDefaults.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0FC65A5175D0BDE004620EB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A0FC65A7175D0BDE004620EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -59,6 +58,8 @@
 		A0FC65D0175D0BDF004620EB /* SecureNSUserDefaultsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecureNSUserDefaultsTests.m; sourceTree = "<group>"; };
 		A0FC65DB175D0C85004620EB /* NSUserDefaults+SecureAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+SecureAdditions.h"; sourceTree = "<group>"; };
 		A0FC65DC175D0C85004620EB /* NSUserDefaults+SecureAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+SecureAdditions.m"; sourceTree = "<group>"; };
+		C8B25D56021C3CFE28B084F2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F60C1D1ACD50E8416C872277 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +94,7 @@
 				A0FC65C9175D0BDF004620EB /* SecureNSUserDefaultsTests */,
 				A0FC65A4175D0BDE004620EB /* Frameworks */,
 				A0FC65A3175D0BDE004620EB /* Products */,
-				832070FFF3404F48B40D7825 /* Pods.xcconfig */,
+				C9FC6E161F81C439A03B1168 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +172,15 @@
 			path = SecureNSUserDefaults;
 			sourceTree = "<group>";
 		};
+		C9FC6E161F81C439A03B1168 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F60C1D1ACD50E8416C872277 /* Pods.debug.xcconfig */,
+				C8B25D56021C3CFE28B084F2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +193,7 @@
 				A0FC659F175D0BDE004620EB /* Frameworks */,
 				A0FC65A0175D0BDE004620EB /* Resources */,
 				71ECC3CE93F5428BB0412C31 /* Copy Pods Resources */,
+				9761DBAB790934A31012FD35 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -210,7 +221,7 @@
 			name = SecureNSUserDefaultsTests;
 			productName = SecureNSUserDefaultsTests;
 			productReference = A0FC65C2175D0BDF004620EB /* SecureNSUserDefaultsTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -288,7 +299,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+		};
+		9761DBAB790934A31012FD35 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		A0FC65C0175D0BDF004620EB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -412,7 +438,7 @@
 		};
 		A0FC65D5175D0BDF004620EB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 832070FFF3404F48B40D7825 /* Pods.xcconfig */;
+			baseConfigurationReference = F60C1D1ACD50E8416C872277 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SecureNSUserDefaults/SecureNSUserDefaults-Prefix.pch";
@@ -424,7 +450,7 @@
 		};
 		A0FC65D6175D0BDF004620EB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 832070FFF3404F48B40D7825 /* Pods.xcconfig */;
+			baseConfigurationReference = C8B25D56021C3CFE28B084F2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SecureNSUserDefaults/SecureNSUserDefaults-Prefix.pch";
