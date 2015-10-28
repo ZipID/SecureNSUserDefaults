@@ -8,6 +8,6 @@ Pod::Spec.new do |s|
   s.author       = { 'Sam Soffes' => 'sam@soff.es' }
   s.source       = { :git => 'https://github.com/ZipArchive/ZipArchive.git', :tag => "v#{s.version}" }
   s.ios.deployment_target = '7.0'
-  s.source_files = 'SecureNSUserDefaults/*'
+  s.source_files = 'SecureNSUserDefaults/SecureNSUserDefaults/*'
   s.requires_arc = true
 end
